@@ -1,0 +1,33 @@
+@mixin button($color,$bg-color,$color-hover, $bg-color-hover,$border-color-hover){
+    
+    color: $color;
+    background-color: $bg-color;
+    border: unset;
+    &:hover{
+        color: $color-hover;
+        background-color: $bg-color-hover;
+        border: 1px solid $border-color-hover;
+    }
+}
+@mixin bg(){
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+@mixin reponds-to($breakpoint){
+    @if map-has-key($map: $breakpoints, $key: $breakpoint ){
+        $value : map-get($map: $breakpoints, $key: $breakpoint );
+        @media screen and (max-width: $value){
+            @content
+        }
+    }
+    @else{
+        @warn "`{$breakpoint}` isn't in breakpoints";
+    } 
+}
+@mixin slider() {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 600px;
+}

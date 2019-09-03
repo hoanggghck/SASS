@@ -1,0 +1,32 @@
+.myFooter{
+    background-color: $color-black-2;
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .footer_item{
+            h2{
+                color: $color-white-1;
+                margin-top: 40px;
+                font-size: $fs-2;
+            }
+            ul{
+                margin-top: 20px;
+                list-style-type: none;
+                li{
+                    margin-bottom: 5px;
+                    
+                    a{
+                        color: $color-black-5;
+                        text-decoration: none;
+                        &:hover{
+                            color: $color-white-1;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+}

@@ -1,0 +1,154 @@
+.myHeader{
+    .header_brand{
+        width: 10%;
+        margin-right: 3%;
+        img{
+            width: 100%;
+        }
+    }
+    .header_navbar_collapse{
+        position: relative;
+        .nav_left{
+            .nav-item{
+                a{
+                    color:  $color-blue-0;
+                }
+            }
+        }
+        .nav_right{
+            .nav-item{
+                margin-left: 20px;
+                
+                .nav-link{
+                    color:  $color-blue-0;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        margin-left: $mg-1 + 5;
+                    }
+                    .item_search{
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+    .icon_sign{
+        display: none;
+        font-size: 35px;
+    }
+    @include reponds-to('extra-large'){
+        .header_navbar_collapse{
+            .nav_left{
+                .nav-item{
+                   
+                }
+            }
+            .nav_right{
+                .header_locate, .header_search, .header_lang, .header_sign{
+                        span{
+                            display: none;
+                        }
+                }
+            }
+        }
+    }
+    @include reponds-to('large'){
+        .header_navbar_collapse{
+            .nav_left{
+                .nav-item{
+                    
+                }
+            }
+        }
+    }
+    @include reponds-to('medium'){
+            .header_brand{
+                width: 21%;
+            }
+            .header_navbar_collapse{
+                overflow-y: auto;
+                height: 343px;
+                .nav_left{
+                    .nav-item{
+                        .nav-link{
+                            &::after{
+                                content: '';
+                                display: block;
+                                border-bottom: 1px dotted $color-blue-0;    
+                                width: 100%;
+                            }
+                        }
+                       
+                    }
+                }
+                .nav_right{
+                    .header_locate, .header_search, .header_lang{
+                            span{
+                                display: none;
+                            }
+                    }
+                    .header_sign{
+                        span{
+                                display: none;
+                            }
+                    }
+                }
+            }
+            .icon_sign{
+                display: block;
+            }
+        }
+    }
+    @include reponds-to('small'){
+            .header_brand{
+                width: 30%;
+            }
+            .header_navbar_collapse{
+                .nav_left{
+                    .nav-item{
+                        .header_collapse{
+                            .nav{
+                                padding: 1.5% 23%;
+                                .nav-item{
+                                    margin-right: 40px;
+                                    margin: auto;
+                                    .nav-link{
+                                        &::after{
+                                            left: 0;
+                                            bottom: 15%;
+                                        }
+                                    }
+                                }
+                            }
+                            .tab-content{
+                                width: 100%;
+                                .tab-pane{
+                                    overflow-y: scroll;
+                                    height: 285px;
+                                    .header_collapse_item{
+                                        img{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                .nav_right{
+                    .header_locate, .header_search, .header_lang{
+                            span{
+                                display: none;
+                            }
+                    }
+                    .header_sign{
+                        span{
+                                display: none;;
+                            }
+             }
+         }
+    }
+}
+

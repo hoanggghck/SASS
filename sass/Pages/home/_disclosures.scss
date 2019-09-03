@@ -1,0 +1,40 @@
+.myDisclosures{
+    height: 100px;
+    margin-bottom: 100px;
+    
+    .disc_collapse{
+        margin-top: 50px;
+        font-size: $fs-3;
+        color: $color-blue-0;
+        margin-left: 43%;
+        
+        border: transparent;
+        background-color: transparent;
+        &:hover{
+            text-decoration: none;
+            color: $color-black-1;
+        }
+    }
+    .collapse{
+        .disc_content{
+            background-color: $color-white-2;
+            overflow-y: scroll;
+            height: 200px;
+            
+        }
+    }
+    @include reponds-to('large'){
+        .disc_collapse{
+            margin-left: 40%;
+        }
+                    
+      
+      }
+    @include reponds-to('small'){
+        .disc_collapse{
+            margin-left: 25%;
+        }
+                    
+      
+      }
+}

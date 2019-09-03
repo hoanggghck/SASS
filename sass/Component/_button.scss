@@ -1,0 +1,8 @@
+.btn--blue{
+    @include button($color-white-0,$color-blue-0,$color-blue-2,$color-white-0,$color-black-0)
+
+}
+.btn--orange{
+    @include button($color-white-0,$color-red-0,$color-red-0,$color-white-0,$color-red-0)
+
+}

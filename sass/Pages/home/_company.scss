@@ -1,0 +1,62 @@
+.myCompany{
+    padding: 30px 0;
+    .company_lang{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        .company_left{
+            .language{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                color: $color-blue-9;
+                &:hover{
+                    list-style-type: none;
+                    color: $color-black-2;
+                }
+                i{
+                    font-size: 30px;
+                    margin-right: 10px;
+                    
+                }
+                span{
+                    font-size: $fs-1;
+                    text-decoration: underline;
+                    
+                }
+                
+            }   
+        }
+        .company_right{
+            img{
+                width: 100px;
+                height: 50px;
+            }
+        }
+    }
+    .company_contact{
+        margin-left: 20px;
+        ul{
+            li{
+                text-decoration: none;
+                margin-left: 5px;
+                a{
+                    color: $color-black-1;
+                    &:hover{
+                        text-decoration: none;
+                        color: $color-blue-0;
+                    }
+                }
+                
+            }
+        }
+    }
+    @include reponds-to('large'){
+        .company_contact{
+            display: none;
+        }
+    }
+
+}
